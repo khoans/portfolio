@@ -4,8 +4,6 @@ import React, { useEffect } from "react";
 import SectionHeading from "./SectionHeading";
 import { projectsData } from "@/lib/data";
 import Project from "./Project";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function Projects() {

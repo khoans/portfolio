@@ -1,6 +1,11 @@
+import React from "react";
+
 import corpcommentImg from "/public/corpcomment.png";
 import rmtdevImg from "/public/rmtdev.png";
 import wordanalyticsImg from "/public/wordanalytics.png";
+import icons from "@/libs/icons";
+
+const { LuGraduationCap, CgWorkAlt } = icons;
 
 export const links = [
   {
@@ -77,3 +82,22 @@ export const skillsData = {
     "Flowbite UI",
   ],
 } as const;
+
+export const experiencesData = [
+  {
+    title: "Software Engineer",
+    location: "Ho Chi Minh City, Vietnam",
+    description:
+      "Tempor reprehenderit culpa eu sint aliqua velit deserunt sunt non deserunt laborum ea consectetur. Ad incididunt reprehenderit.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2023",
+  },
+  {
+    title: "Software Engineer",
+    location: "Ho Chi Minh City, Vietnam",
+    description:
+      "Tempor reprehenderit culpa eu sint aliqua velit deserunt sunt non deserunt laborum ea consectetur. Ad incididunt reprehenderit.",
+    icon: React.createElement(CgWorkAlt),
+    date: "08/2023 - 02/2024",
+  },
+] as const;
