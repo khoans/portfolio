@@ -1,16 +1,24 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import SectionHeading from "./SectionHeading";
 import { useSectionInView } from "@/libs/hooks";
 import { motion } from "framer-motion";
-import icons from "@/libs/icons";
 import { sendEmail } from "@/actions/sendEmail";
+import SubmitButton from "./SubmitButton";
+import toast from "react-hot-toast";
 
-const { FaPaperPlane } = icons;
+interface FormStatus {
+  message: string;
+  status: "success" | "error" | null;
+}
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  const [formStatus, setFormStatus] = useState<FormStatus>({
+    message: "",
+    status: null,
+  });
 
   return (
     <motion.section
@@ -42,7 +50,18 @@ export default function Contact() {
       <form
         className="mt-10 flex flex-col"
         action={async (formData) => {
-          await sendEmail(formData);
+          const { data } = await sendEmail(formData);
+
+          if (data?.error) {
+            setFormStatus({ message: data?.error?.message, status: "error" });
+            toast.error(data?.error?.message);
+            return;
+          }
+          setFormStatus({
+            message: "Email sent successfully",
+            status: "success",
+          });
+          toast.success("Email sent successfully");
         }}
       >
         <input
@@ -52,6 +71,7 @@ export default function Contact() {
           required
           maxLength={500}
           placeholder="Your email"
+          onChange={() => setFormStatus({ message: "", status: null })}
         />
         <textarea
           className="h-52 my-3 rounded-lg borderBlack p-4"
@@ -59,13 +79,20 @@ export default function Contact() {
           placeholder="Your message"
           required
           maxLength={5000}
+          onChange={() => setFormStatus({ message: "", status: null })}
         />
-        <button
-          type="submit"
-          className="h-[3rem] w-[8rem] flex items-center justify-center gap-2 bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 group"
-        >
-          Submit <FaPaperPlane className="text-xs opacity-70 transition-all" />
-        </button>
+        <SubmitButton />
+        {formStatus.message && (
+          <p
+            className={
+              formStatus.status === "success"
+                ? "form-success-message"
+                : "form-error-message"
+            }
+          >
+            {formStatus.message}
+          </p>
+        )}
       </form>
     </motion.section>
   );

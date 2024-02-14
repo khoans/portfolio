@@ -13,3 +13,24 @@ html {
 .borderBlack {
     @apply border border-black/10
 }
+
+/* Success message style */
+.form-success-message {
+    color: #77d871; 
+    background-color: #EBF9EB; 
+    border: 1px solid #77d871; 
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  /* Error message style */
+  .form-error-message {
+    color: #FF414D; 
+    background-color: #FFEBEE; 
+    border: 1px solid #FF414D; 
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
