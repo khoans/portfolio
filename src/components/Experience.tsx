@@ -8,12 +8,13 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
+import { useSectionInView } from "@/lib/hooks";
 
-console.log(experiencesData);
 
 export default function Experience() {
+    const { ref } = useSectionInView("Experience", 0.5);
   return (
-    <section id="experience">
+    <section id="experience" className="scroll-mt-28 mb-28" ref={ref}>
       <SectionHeading>My Experience</SectionHeading>
       {/* Vertical Timeline add lineColor to html tag on the client, but not on the server, causing a hydration error */}
       <VerticalTimeline lineColor="">
