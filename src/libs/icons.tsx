@@ -1,20 +1,19 @@
-import { BsArrowRight,BsLinkedin } from "react-icons/bs";
+import { BsMoon, BsSun, BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare,FaPaperPlane } from "react-icons/fa";
-import {LuGraduationCap} from 'react-icons/lu'
-import {CgWorkAlt} from 'react-icons/cg'
-
+import { FaGithubSquare, FaPaperPlane } from "react-icons/fa";
+import { LuGraduationCap } from "react-icons/lu";
+import { CgWorkAlt } from "react-icons/cg";
 
 const icons = {
-    BsArrowRight,
-    BsLinkedin,
-    HiDownload,
-    FaGithubSquare,
-    FaPaperPlane,
-    LuGraduationCap,
-    CgWorkAlt
+  BsArrowRight,
+  BsLinkedin,
+  HiDownload,
+  FaGithubSquare,
+  FaPaperPlane,
+  LuGraduationCap,
+  CgWorkAlt,
+  BsSun,
+  BsMoon,
+} as const;
 
-} as const
-
-export default icons
-
+export default icons;

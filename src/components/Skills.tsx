@@ -37,7 +37,7 @@ export default function Skills() {
             className="flex flex-1 items-start justify-center gap-5 w-full"
           >
             <motion.h3
-              className="capitalize  flex-shrink-0 text-xl font-medium mb-8"
+              className="capitalize  flex-shrink-0 text-xl font-medium mb-8 dark:text-white/70"
               style={{ flexBasis: "150px", flexGrow: 0 }}
               variants={fadeInAnimationVariants}
               initial="initial"
@@ -53,7 +53,7 @@ export default function Skills() {
               {skills.map((skill, skillIndex) => (
                 <div key={skill} className="flex items-center">
                   <motion.li
-                    className="bg-white borderBlack rounded-xl px-5 py-3"
+                    className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/60"
                     variants={fadeInAnimationVariants}
                     initial="initial"
                     whileInView="animate"

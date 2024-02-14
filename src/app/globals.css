@@ -3,34 +3,37 @@
 @tailwind utilities;
 
 html {
-    --line-color: #e5e7eb;
+  --line-color: #e5e7eb;
+}
+
+html.dark {
+  --line-color: rgba(255, 255, 255, 0.2);
 }
 
 .vertical-date {
-    margin: 0 1rem;
+  margin: 0 1rem;
 }
 
 .borderBlack {
-    @apply border border-black/10
+  @apply border border-black/10;
 }
 
 /* Success message style */
 .form-success-message {
-    color: #77d871; 
-    background-color: #EBF9EB; 
-    border: 1px solid #77d871; 
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-  }
-  
-  /* Error message style */
-  .form-error-message {
-    color: #FF414D; 
-    background-color: #FFEBEE; 
-    border: 1px solid #FF414D; 
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-  }
-  
+  color: #77d871;
+  background-color: #ebf9eb;
+  border: 1px solid #77d871;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Error message style */
+.form-error-message {
+  color: #ff414d;
+  background-color: #ffebee;
+  border: 1px solid #ff414d;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
