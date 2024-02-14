@@ -9,3 +9,7 @@ html {
 .vertical-date {
     margin: 0 1rem;
 }
+
+.borderBlack {
+    @apply border border-black/10
+}

@@ -61,25 +61,21 @@ export const projectsData = [
 export const skillsData = {
   frontend: ["HTML", "CSS", "ReactJS", "NextJS"],
   languages: ["Python", "JavaScript", "TypeScript"],
-  backend: ["ExpressJS", "NestJS", "Django", "Firebase"],
+  backend: ["ExpressJS", "NestJS", "Django", "Firebase", "Odoo 16"],
   database: ["MongoDB", "MySQL", "PostgreSQL"],
-  tools: [
-    "Git",
-    "Github",
+  tools: ["Git", "Github", "Mongoose", "Sequelize", "Prisma"],
+  libraries: [
     "TailwindCSS",
     "SASS/SCSS",
     "Styled-Components",
-    "Sequelize",
-    "Prisma",
-  ],
-  libraries: [
     "Framer Motion",
     "Fabric JS",
     "Quill Editor",
     "CKEditor",
     "JQuery",
     "Redux Toolkit",
-    "Flowbite UI",
+    "Flowbite React",
+    "Liveblocks",
   ],
 } as const;
 
