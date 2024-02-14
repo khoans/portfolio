@@ -6,18 +6,10 @@ import { projectsData } from "@/lib/data";
 import Project from "./Project";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Projects() {
-  const { ref, inView } = useInView({
-    threshold: 0.3,
-  });
-  const { setActiveSection } = useActiveSectionContext();
-  console.log("inView", inView);
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("Projects");
-    }
-  }, [inView, setActiveSection]);
+  const { ref } = useSectionInView("Projects", 0.5);
   return (
     <section id="projects" className="scroll-mt-28 mb-28" ref={ref}>
       <SectionHeading>My Projects</SectionHeading>

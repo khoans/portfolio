@@ -7,20 +7,22 @@ import icons from "@/libs/icons";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import { useSectionInView } from "@/lib/hooks";
 
 const { BsArrowRight, HiDownload, BsLinkedin, FaGithubSquare } = icons;
 
 export default function Intro() {
-  const { ref, inView } = useInView({
-    threshold: 0.3,
-  });
-  const { setActiveSection } = useActiveSectionContext();
+  // const { ref, inView } = useInView({
+  //   threshold: 0.3,
+  // });
+  // const { setActiveSection } = useActiveSectionContext();
 
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("Home");
-    }
-  }, [inView, setActiveSection]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     setActiveSection("Home");
+  //   }
+  // }, [inView, setActiveSection]);
+  const { ref } = useSectionInView("Home");
   return (
     <section
       id="home"
