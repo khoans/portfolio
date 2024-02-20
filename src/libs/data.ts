@@ -1,9 +1,10 @@
 import React from "react";
 
-import corpcommentImg from "/public/corpcomment.png";
-import rmtdevImg from "/public/rmtdev.png";
-import wordanalyticsImg from "/public/wordanalytics.png";
 import icons from "@/libs/icons";
+// import image1 from "/public/project_images/project1/image1.jpg";
+import codepen from "/public/codepen.png";
+import phongtro from "/public/phongtro.png";
+import zing from "/public/zing.png";
 
 const { LuGraduationCap, CgWorkAlt } = icons;
 
@@ -36,25 +37,28 @@ export const links = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Code Showcase",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "A collection of code snippets that will auto render on the website.",
+    tags: ["React", "Tailwind", "Firebase", "Framer Motion"],
+    imageUrl: codepen,
+    url: "https://khoa-codepen.netlify.app/",
   },
   {
-    title: "rmtDev",
+    title: "Music Playlist",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "A public web app for music playlist that can filter, search based on song names, albums and artists.",
+    tags: ["React", "Tailwind", "Redux", "Express"],
+    imageUrl: zing,
+    url: "https://khoa-testzing.netlify.app/",
   },
   {
-    title: "Word Analytics",
+    title: "Rental Real Estate",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "A public web app for rental real estate that can filter, search based on location, price and acreage.",
+    tags: ["React", "PostgresSQL", "Tailwind"],
+    imageUrl: phongtro,
+    url: "https://khoa-phongtro.netlify.app/",
   },
 ] as const;
 
@@ -81,19 +85,12 @@ export const skillsData = {
 
 export const experiencesData = [
   {
-    title: "Software Engineer",
+    title: "Web Developer",
     location: "Ho Chi Minh City, Vietnam",
-    description:
-      "Tempor reprehenderit culpa eu sint aliqua velit deserunt sunt non deserunt laborum ea consectetur. Ad incididunt reprehenderit.",
+    description: `Develop a course hosting platform for corporates training.\n\nBackend: Create custom modules involving managing clients, teachers, courses, feedbacks, CMS, grading system.\n\nFrontend: Create responsive layout for course content, course profile, dashboard for admin and teachers.`,
     icon: React.createElement(LuGraduationCap),
-    date: "2023",
-  },
-  {
-    title: "Software Engineer",
-    location: "Ho Chi Minh City, Vietnam",
-    description:
-      "Tempor reprehenderit culpa eu sint aliqua velit deserunt sunt non deserunt laborum ea consectetur. Ad incididunt reprehenderit.",
-    icon: React.createElement(CgWorkAlt),
     date: "08/2023 - 02/2024",
   },
 ] as const;
+
+export const individualProjectData = [{}];

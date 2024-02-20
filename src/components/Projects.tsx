@@ -5,6 +5,7 @@ import SectionHeading from "./SectionHeading";
 import { projectsData } from "@/libs/data";
 import Project from "./Project";
 import { useSectionInView } from "@/libs/hooks";
+// import Project2 from "./Project2";
 
 export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.5);
@@ -15,6 +16,11 @@ export default function Projects() {
         {projectsData.map((project, index) => (
           <Project {...project} key={index} />
         ))}
+        {/* {projectsData.map((project, index) => (
+          <Project2 {...project} key={index} />
+        ))} */}
+
+        {/* <Project2 /> */}
       </div>
     </section>
   );

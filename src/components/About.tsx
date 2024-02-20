@@ -21,29 +21,20 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget
-        semper justo. Fusce vel mi vitae libero imperdiet aliquet. Vivamus vitae
-        purus ut urna fringilla cursus. Maecenas consectetur magna nec velit
-        fermentum, nec venenatis mi cursus. Duis vitae leo sit amet metus
-        porttitor vehicula. Phasellus efficitur commodo urna, eget luctus lorem
-        vestibulum et.
-        <span className="italic">
-          Nam non sapien vel risus consectetur ultricies. Donec in dolor vitae
-          magna suscipit suscipit.
-        </span>
-        Suspendisse potenti. Duis vel nisi nec orci maximus aliquam. Quisque
-        ultricies nunc ut ex vulputate tristique.
-        <span className="font-medium">Integer non sapien ipsum.</span>
-        <span className="font-medium">Vestibulum feugiat mauris at.</span>
-      </p>
-
-      <p>
-        <span className="italic">When I&apos;m not coding</span>, I enjoy
-        playing video games, watching movies, and playing with my dog. I also
-        enjoy <span className="font-medium">learning new things</span>. I am
-        currently learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I&apos;m
-        also learning how to play the guitar.
+        <p>
+          As a web developer, I have acquired foundational and proficiency
+          skills in ReactJS, NodeJS and Python and their related framework,
+          despite my limited professional experience. Through professional work
+          and personal projects, I&apos;ve developed a solid understanding of
+          these technologies and their application in website development.
+        </p>
+        <p>
+          With a passion for coding, a commitment to continuous growth and the
+          curiosity of learning the intricacy of system infrastructure, I&apos;m
+          eager to contribute to a development team where I can apply my
+          knowledge to practical use and expand my boundary under the guidance
+          of senior developers.
+        </p>
       </p>
     </motion.section>
   );

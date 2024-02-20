@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 import { useSectionInView } from "@/libs/hooks";
+import khoa from "/public/khoa.jpg";
 
 const { BsArrowRight, HiDownload, BsLinkedin, FaGithubSquare } = icons;
 
@@ -41,26 +42,34 @@ export default function Intro() {
             }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
+              src={khoa}
               alt="Khoa"
-              width="192"
-              height="192"
+              width="200"
+              height="200"
               quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="h-28 w-28 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
         </div>
       </div>
-      <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+      <motion.p
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl flex flex-col gap-3"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Khoa.</span> I&apos;m a{" "}
-        <span className="font-bold">Web Developer</span>. I enjoy building{" "}
-        <span className="italic">sites & apps</span>.
-      </motion.h1>
+        <p className="flex flex-col gap-2">
+          <span className="font-medium text-white/70">
+            Hello, Welcome to my sites
+          </span>
+          <span className="">
+            My name is <span className="font-bold">Khoa.</span>
+          </span>
+        </p>
+        <p>
+          I enjoy building <span className="italic">sites & apps</span>.
+        </p>
+      </motion.p>
 
       <motion.div
         className="flex flex=col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
@@ -92,14 +101,16 @@ export default function Intro() {
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://linkedin.com"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <BsLinkedin />
         </a>
 
         <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com"
+          href="https://github.com/khoans"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <FaGithubSquare />
         </a>
