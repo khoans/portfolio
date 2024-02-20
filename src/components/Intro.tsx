@@ -59,9 +59,7 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         <p className="flex flex-col gap-2">
-          <span className="font-medium text-white/70">
-            Hello, Welcome to my sites
-          </span>
+          <span className="font-medium">Hello, Welcome to my sites</span>
           <span className="">
             My name is <span className="font-bold">Khoa.</span>
           </span>
@@ -91,7 +89,7 @@ export default function Intro() {
         </Link>
         <a
           className="group bg-white px-7 py-3 text-sm sm:text-md lg:text-lg flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="/CV.pdf"
+          href="/CV/CV - NGUYEN SONG KHOA.pdf"
           download
         >
           Download CV{" "}
